@@ -109,6 +109,14 @@ session_start();
 
     <br>
 
+    <br>
+    <form action="profilepage.php" method="POST">
+    <center>
+        <button  class="w3-button w3-khaki" type="submit" name ="submit">View Profiles</button>
+    </center>
+    </form>
+    <br><br>
+
 
 
 </body>

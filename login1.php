@@ -18,24 +18,44 @@ error_reporting(0) ;
     <h1><center>Login Portal</center></h1>
 	<hr>
 	<br>
-	<center>
+<center>
     <form action="" method="POST">
 		Enter Your faculty ID:
-    <input class="w3-input" type="number" name ="FacultyID" placeholder="Enter your Faculty ID">
-    <br><br>
-		Enter your Password:  
-    <input class="w3-input" type="password" name ="Password" placeholder="Enter Password">
-    <br>
-	<br>
-    <button  class="w3-button w3-khaki" type="submit" name ="submit">Login</button>
-    <br>
-	</center>
-</form>
+		<input class="w3-input" type="number" name ="FacultyID" placeholder="Enter your Faculty ID">
+		<br><br>
+			Enter your Password:  
+		<input class="w3-input" type="password" name ="Password" placeholder="Enter Password">
+		<br>
+		<br>
+		<button  class="w3-button w3-khaki" type="submit" name ="submit">Login</button>
+		<br>
+		
+		</form>
+	
+	<br><hr><br>
+	<form action="" method="POST">
+		<button  class="w3-button w3-khaki" type="submit" name ="submit2">Login as guest</button>
+	</form>
+</center>
 </body>
 </html>
 <?php
 
-	if(isset($_POST['submit'])){
+
+if(isset($_POST['submit2']))
+{
+
+	$faculty_id = -1;
+	$pwd = 'NA';
+	$_SESSION['faculty_id'] = $faculty_id ;
+	header('location:profilepage.php') ;
+
+}
+
+
+
+if(isset($_POST['submit']))
+{
 
 	$faculty_id = $_POST['FacultyID'];
 	$pwd = $_POST['Password'];
